@@ -15,7 +15,6 @@
       <useProjectArtifact>false</useProjectArtifact>      
       <useTransitiveDependencies>true</useTransitiveDependencies>
       <useTransitiveFiltering>false</useTransitiveFiltering>
-      <useDefaultExcludes>true</useDefaultExcludes>
       <unpack>false</unpack>
     </dependencySet>
   </dependencySets>

@@ -12,7 +12,6 @@
   <fileSets>
     <fileSet>
       <directory>${project.basedir}/..</directory>
-      <useDefaultExcludes>true</useDefaultExcludes>
       <outputDirectory>teiid</outputDirectory>
       <excludes>
           <exclude>**/target/**</exclude>
