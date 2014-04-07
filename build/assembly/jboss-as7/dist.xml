@@ -19,7 +19,6 @@
           <include>**/*.sh</include>
         </includes>   
         <fileMode>755</fileMode>  
-        <directoryMode>0755</directoryMode>    
     </fileSet> 
           
     <fileSet>
@@ -28,8 +27,6 @@
         <excludes>
           <exclude>**/*.sh</exclude>
         </excludes>      
-        <fileMode>0644</fileMode>
-        <directoryMode>0755</directoryMode>
     </fileSet>
     
     <fileSet>
@@ -38,8 +35,6 @@
         <excludes>
           <exclude>**/*.properties</exclude>
         </excludes>      
-        <fileMode>0600</fileMode>
-        <directoryMode>0755</directoryMode>
     </fileSet>
     
     <fileSet>
@@ -48,15 +43,24 @@
         <includes>
             <include>teiid-${project.version}-jdbc.jar</include>
         </includes>
-        <fileMode>0644</fileMode>
     </fileSet>
     
     <fileSet>
         <directory>target/teiid-${project.version}-adminshell-dist/teiid-adminshell</directory>
         <outputDirectory>datavirtualization/teiid-adminshell</outputDirectory>
-        <fileMode>0644</fileMode>
+        <excludes>
+          <exclude>**/*.sh</exclude>
+        </excludes>
+     </fileSet>
+ 
+    <fileSet>
+        <directory>target/teiid-${project.version}-adminshell-dist/teiid-adminshell</directory>
+        <outputDirectory>datavirtualization/teiid-adminshell</outputDirectory>
+        <fileMode>0755</fileMode>
+        <includes>
+          <include>**/*.sh</include>
+        </includes>
     </fileSet>
-
 
           
     <fileSet>
@@ -65,8 +69,6 @@
             <include>vdb-deployer.xsd</include>
         </includes>                
         <outputDirectory>docs/teiid/schema</outputDirectory>
-        <fileMode>0644</fileMode>
-        <directoryMode>0755</directoryMode>        
     </fileSet>
     
     <fileSet>
@@ -75,8 +77,6 @@
             <include>jboss-teiid.xsd</include>
         </includes>                
         <outputDirectory>docs/schema</outputDirectory>
-        <fileMode>0644</fileMode>
-        <directoryMode>0755</directoryMode>        
     </fileSet>
     
     	
@@ -173,7 +173,6 @@
                 </dependencySet>
             </dependencySets>
             <outputDirectory>modules/system/layers/base/org/jboss/teiid/main</outputDirectory>
-            <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     
@@ -213,7 +212,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/file/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     
@@ -237,7 +235,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/ldap/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     
@@ -261,7 +258,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/salesforce/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     
@@ -285,7 +281,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/google/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
 
@@ -309,7 +304,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/mongodb/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     
@@ -333,7 +327,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/webservice/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     
@@ -357,7 +350,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/infinispan/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
    
@@ -381,7 +373,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/resource-adapter/infinispan/6.2</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
          
@@ -407,7 +398,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/jdbc/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
@@ -431,7 +421,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/loopback/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
@@ -454,7 +443,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/file/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
@@ -477,7 +465,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/ldap/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
@@ -500,7 +487,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/google/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     <moduleSet>
@@ -522,7 +508,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/google/api/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
 
@@ -545,7 +530,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/mongodb/api/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
 
@@ -568,7 +552,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/salesforce/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>
     <moduleSet>
@@ -590,7 +573,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/salesforce/api/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>    
     <moduleSet>
@@ -612,7 +594,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/ws/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
@@ -635,7 +616,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/olap/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>                        
@@ -657,7 +637,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/hive/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>      
     
@@ -678,7 +657,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/jpa/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
     </moduleSet>        
      
@@ -699,7 +677,6 @@
                   </dependencySet>
               </dependencySets>          
               <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/object/main</outputDirectory>
-              <fileMode>0644</fileMode>
           </binaries>
       </moduleSet>   
       
@@ -720,7 +697,6 @@
                   </dependencySet>
               </dependencySets>          
               <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/odata/main</outputDirectory>
-              <fileMode>0644</fileMode>
           </binaries>
       </moduleSet>
     <moduleSet>
@@ -742,7 +718,6 @@
                 </dependencySet>
             </dependencySets>          
           <outputDirectory>modules/system/layers/base/org/jboss/teiid/translator/mongodb/main</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
@@ -760,7 +735,6 @@
           <includeDependencies>false</includeDependencies>
           <unpack>false</unpack>
           <outputDirectory>deploy/admin-console.war/plugins</outputDirectory>
-          <fileMode>0644</fileMode>
         </binaries>
       
     </moduleSet>
